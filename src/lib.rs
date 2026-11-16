@@ -191,6 +191,18 @@ struct Settings {
     /// Level 14-4
     #[default = true]
     level14_4: bool,
+    /// Level 15-1
+    #[default = true]
+    level15_1: bool,
+    /// Level 15-2
+    #[default = true]
+    level15_2: bool,
+    /// Level 15-3
+    #[default = true]
+    level15_3: bool,
+    /// Level 15-4
+    #[default = true]
+    level15_4: bool,
 }
 
 async fn main() {
@@ -349,6 +361,10 @@ fn split(watchers: &Watchers, settings: &Settings) -> bool {
             1402 => settings.level14_2,
             1403 => settings.level14_3,
             1404 => settings.level14_4,
+            1501 => settings.level14_1,
+            1502 => settings.level14_2,
+            1503 => settings.level14_3,
+            1504 => settings.level14_4,
             _ => false,
         })
 }
